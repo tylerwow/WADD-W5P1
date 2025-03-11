@@ -145,6 +145,7 @@ body {
     position:absolute;
     left:100%;
     bottom:0%;
+    animation: moon 3s infinite linear;
 }
 
 @keyframes sun-container {
@@ -156,6 +157,15 @@ body {
     }
 }
 
+@keyframes moon {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 .day-night {
     animation: day-night 3s infinite linear;
 }
@@ -164,7 +174,13 @@ body {
     0% {
         background-color: skyblue;
     }
+    30% {
+        background-color: rgb(135, 206, 235);
+    }
     50% {
+        background-color: black;
+    }
+    80% {
         background-color: black;
     }
     100% {
